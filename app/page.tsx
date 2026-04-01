@@ -1,17 +1,19 @@
 "use client"
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
   const [lang, setLang] = useState<'id' | 'en'>('id');
 
-  const fadeInUp = {
+  // PERBAIKAN: Menambahkan ": Variants" di sini agar TypeScript/Vercel tidak error
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
-  const staggerContainer = {
+  // PERBAIKAN: Menambahkan ": Variants" di sini juga
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
   };
@@ -100,7 +102,7 @@ export default function Home() {
     en: {
       nav: { about: "About", exp: "Experience", port: "Portfolio", edu: "Education", contact: "Contact" },
       hero: {
-        badge: "Available for New Opportunities",
+        badge: "Available for Freelance & Collaboration",
         role: "Senior System Analyst & Full-Stack Engineer",
         desc: <>5+ years of experience in designing <span className="font-bold text-slate-200">enterprise</span> system architectures, ESB integrations, and developing <span className="font-bold text-slate-200">scalable</span> web, mobile, and desktop applications.</>,
         btn: "View Experience",
