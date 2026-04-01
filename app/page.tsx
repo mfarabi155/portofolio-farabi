@@ -430,18 +430,18 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Footer */}
+{/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-10 text-center flex flex-col items-center justify-center">
-
+        
         {/* Visitor Counter Badge */}
         <div className="mb-6 flex flex-col items-center gap-2">
           <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
             {lang === 'id' ? 'Total Pengunjung' : 'Total Visitors'}
           </span>
-          <img
-            src="https://hits.se/portofolio-farabi.vercel.app?style=for-the-badge&logo=vercel&logoColor=white&color=06B6D4"
-            alt="Visitor Count"
-            className="rounded-md hover:scale-105 transition-transform"
+          <img 
+            src="https://hits.sh/portofolio-farabi.vercel.app.svg?style=for-the-badge&label=VISITORS&color=06b6d4&labelColor=0f172a" 
+            alt="Visitor Count" 
+            className="rounded-md hover:scale-105 transition-transform shadow-lg"
           />
         </div>
 
