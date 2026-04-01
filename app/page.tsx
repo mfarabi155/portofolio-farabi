@@ -180,7 +180,7 @@ export default function Home() {
     }
   };
 
-  const t = content[lang]; 
+  const t = content[lang];
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500 selection:text-white scroll-smooth overflow-hidden">
@@ -239,7 +239,7 @@ export default function Home() {
               <a href="#pengalaman" className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-3 rounded-lg font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.3)]">
                 {t.hero.btn}
               </a>
-              
+
               <a href="/cv-farabi.pdf" download="CV_Muhammad_Farabi_Ismail.pdf" className="flex items-center gap-2 border border-slate-700 hover:border-cyan-500 bg-slate-900 hover:bg-slate-800 text-slate-300 px-6 py-3 rounded-lg font-bold transition-all hover:scale-105">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 {t.hero.btnDownload}
@@ -352,12 +352,12 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-green-900/40 to-slate-900 group-hover:scale-105 transition-transform duration-700"></div>
                 <img src={port.img} alt={port.name} className="relative z-10 w-auto h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-lg" />
               </div>
-              
+
               {/* Teks */}
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-green-400 transition-colors">{port.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow text-justify">{port.desc}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {port.tags.map(tag => (
                     <span key={tag} className="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-md border border-slate-700">{tag}</span>
@@ -365,7 +365,7 @@ export default function Home() {
                 </div>
 
                 <a href={port.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-green-500 hover:text-green-400 transition-colors">
-                  Visit Website 
+                  Visit Website
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
               </div>
@@ -431,7 +431,20 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950 py-8 text-center">
+      <footer className="border-t border-slate-900 bg-slate-950 py-10 text-center flex flex-col items-center justify-center">
+
+        {/* Visitor Counter Badge */}
+        <div className="mb-6 flex flex-col items-center gap-2">
+          <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+            {lang === 'id' ? 'Total Pengunjung' : 'Total Visitors'}
+          </span>
+          <img
+            src="https://hits.se/portofolio-farabi.vercel.app?style=for-the-badge&logo=vercel&logoColor=white&color=06B6D4"
+            alt="Visitor Count"
+            className="rounded-md hover:scale-105 transition-transform"
+          />
+        </div>
+
         <p className="text-slate-500 text-sm">
           &copy; {new Date().getFullYear()} Muhammad Farabi Ismail (SetsunaF). All rights reserved.
         </p>
