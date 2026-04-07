@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { motion, Variants } from "framer-motion";
@@ -6,13 +7,11 @@ import { useState } from "react";
 export default function Home() {
   const [lang, setLang] = useState<'id' | 'en'>('id');
 
-  // PERBAIKAN: Menambahkan ": Variants" di sini agar TypeScript/Vercel tidak error
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
-  // PERBAIKAN: Menambahkan ": Variants" di sini juga
   const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
@@ -76,6 +75,13 @@ export default function Home() {
       portfolio: {
         title: "Karya & Portofolio",
         items: [
+          {
+            name: "Platform E-Learning Kelas Bersama",
+            desc: "Pengembangan platform pembelajaran daring terpadu menggunakan framework Moodle. Sistem ini diperkaya dengan integrasi Artificial Intelligence (AI) untuk meningkatkan pengalaman belajar dan otomatisasi sistem evaluasi peserta didik.",
+            link: "https://kelasbersama.my.id/",
+            img: "/logo-kelasbersama.png",
+            tags: ["LMS Moodle", "AI Integration", "Web Development"]
+          },
           {
             name: "Portal Resmi LLDIKTI Wilayah VII",
             desc: "Pengembangan website resmi Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah VII Kemdiktisaintek. Platform ini berfungsi sebagai pusat informasi, pengumuman, dan portal layanan terintegrasi bagi seluruh perguruan tinggi di wilayah Jawa Timur.",
@@ -155,6 +161,13 @@ export default function Home() {
       portfolio: {
         title: "Featured Projects",
         items: [
+          {
+            name: "Kelas Bersama E-Learning Platform",
+            desc: "Developed an integrated online learning platform utilizing the Moodle framework. This system is enhanced with Artificial Intelligence (AI) integrations to elevate the learning experience and automate student evaluation systems.",
+            link: "https://kelasbersama.my.id/",
+            img: "/logo-kelasbersama.png",
+            tags: ["LMS Moodle", "AI Integration", "Web Development"]
+          },
           {
             name: "LLDIKTI Region VII Official Portal",
             desc: "Developed the official website for the Higher Education Service Institution (LLDIKTI) Region VII. This platform serves as a centralized hub for information, public announcements, and integrated services for all universities in East Java.",
@@ -285,7 +298,8 @@ export default function Home() {
               <div>
                 <h4 className="text-sm font-medium text-slate-500 mb-3 uppercase tracking-wider">{t.about.progLang}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['PHP', 'Python', 'C#', 'C++', 'Java', 'Kotlin', 'JavaScript', 'UML'].map(skill => (
+                  {/* Ditambahkan 'Go' ke dalam daftar */}
+                  {['PHP', 'Python', 'Go', 'C#', 'C++', 'Java', 'Kotlin', 'JavaScript', 'UML'].map(skill => (
                     <motion.span whileHover={{ scale: 1.1 }} key={skill} className="cursor-default px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-sm text-cyan-100">{skill}</motion.span>
                   ))}
                 </div>
@@ -430,7 +444,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-{/* Footer */}
+      {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-10 text-center flex flex-col items-center justify-center">
         
         {/* Visitor Counter Badge */}
