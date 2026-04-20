@@ -20,7 +20,7 @@ export default function Home() {
   // Kamus Konten (Dictionary)
   const content = {
     id: {
-      nav: { about: "Tentang", exp: "Pengalaman", port: "Portofolio", edu: "Pendidikan", contact: "Kontak" },
+      nav: { about: "Tentang", exp: "Pengalaman", port: "Portofolio", news: "Berita", edu: "Pendidikan", contact: "Kontak" },
       hero: {
         badge: "Tersedia untuk Peluang Baru & Kolaborasi",
         role: "Senior System Analyst & Full-Stack Engineer",
@@ -91,6 +91,14 @@ export default function Home() {
           }
         ]
       },
+      news: {
+        title: "Media & Berita",
+        items: [
+          { title: "Alumni Sambang Prodi IAPTI FILKOM UB", date: "25 Maret 2024", link: "https://filkom.ub.ac.id/2024/03/25/alumni-sambang-prodi-iapti-filkom-ub/" },
+          { title: "Prodi PTI Sambung Silaturahmi Antar Alumni", date: "7 September 2023", link: "https://filkom.ub.ac.id/2023/09/07/prodi-pti-sambung-silaturahmi-antar-alumni/" },
+          { title: "Penjajakan Topik & Percepatan Skripsi Prodi PTI", date: "29 Januari 2021", link: "https://filkom.ub.ac.id/2021/01/29/penjajakan-topik-dan-usaha-percepatan-penyelesaian-skripsi-prodi-pti/" }
+        ]
+      },
       edu: {
         titleEdu: "Riwayat Pendidikan",
         titleOrg: "Organisasi",
@@ -106,7 +114,7 @@ export default function Home() {
       }
     },
     en: {
-      nav: { about: "About", exp: "Experience", port: "Portfolio", edu: "Education", contact: "Contact" },
+      nav: { about: "About", exp: "Experience", port: "Portfolio", news: "News", edu: "Education", contact: "Contact" },
       hero: {
         badge: "Available for Freelance & Collaboration",
         role: "Senior System Analyst & Full-Stack Engineer",
@@ -177,6 +185,14 @@ export default function Home() {
           }
         ]
       },
+      news: {
+        title: "Media & News",
+        items: [
+          { title: "Alumni Visit: IAPTI FILKOM UB Program", date: "March 25, 2024", link: "https://filkom.ub.ac.id/2024/03/25/alumni-sambang-prodi-iapti-filkom-ub/" },
+          { title: "PTI Program Strengthens Alumni Ties", date: "September 7, 2023", link: "https://filkom.ub.ac.id/2023/09/07/prodi-pti-sambung-silaturahmi-antar-alumni/" },
+          { title: "Thesis Topic Exploration & Acceleration Program", date: "January 29, 2021", link: "https://filkom.ub.ac.id/2021/01/29/penjajakan-topik-dan-usaha-percepatan-penyelesaian-skripsi-prodi-pti/" }
+        ]
+      },
       edu: {
         titleEdu: "Education History",
         titleOrg: "Organization",
@@ -209,6 +225,7 @@ export default function Home() {
               <a href="#tentang" className="hover:text-cyan-400 transition">{t.nav.about}</a>
               <a href="#pengalaman" className="hover:text-cyan-400 transition">{t.nav.exp}</a>
               <a href="#portofolio" className="hover:text-cyan-400 transition">{t.nav.port}</a>
+              <a href="#berita" className="hover:text-cyan-400 transition">{t.nav.news}</a>
               <a href="#pendidikan" className="hover:text-cyan-400 transition">{t.nav.edu}</a>
               <a href="#kontak" className="hover:text-cyan-400 transition">{t.nav.contact}</a>
             </div>
@@ -298,7 +315,6 @@ export default function Home() {
               <div>
                 <h4 className="text-sm font-medium text-slate-500 mb-3 uppercase tracking-wider">{t.about.progLang}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {/* Ditambahkan 'Go' ke dalam daftar */}
                   {['PHP', 'Python', 'Go', 'C#', 'C++', 'Java', 'Kotlin', 'JavaScript', 'UML'].map(skill => (
                     <motion.span whileHover={{ scale: 1.1 }} key={skill} className="cursor-default px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-sm text-cyan-100">{skill}</motion.span>
                   ))}
@@ -361,29 +377,69 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {t.portfolio.items.map((port, idx) => (
             <motion.div key={idx} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.5, delay: idx * 0.2 }} className="group relative flex flex-col bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden hover:border-green-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(34,197,94,0.15)]">
-              {/* Visual dengan Logo */}
               <div className="h-48 w-full bg-slate-800 relative overflow-hidden border-b border-slate-800 flex items-center justify-center p-6">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-900/40 to-slate-900 group-hover:scale-105 transition-transform duration-700"></div>
                 <img src={port.img} alt={port.name} className="relative z-10 w-auto h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-lg" />
               </div>
-
-              {/* Teks */}
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-green-400 transition-colors">{port.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow text-justify">{port.desc}</p>
-
                 <div className="flex flex-wrap gap-2 mb-6">
                   {port.tags.map(tag => (
                     <span key={tag} className="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-md border border-slate-700">{tag}</span>
                   ))}
                 </div>
-
                 <a href={port.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-green-500 hover:text-green-400 transition-colors">
                   Visit Website
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
               </div>
             </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* News & Activity Section - NEW MODERN DESIGN */}
+      <section id="berita" className="max-w-5xl mx-auto px-6 py-24 border-t border-slate-900">
+        <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold text-slate-100 mb-12 flex items-center gap-3">
+          <span className="w-8 h-1 bg-orange-500 rounded-full"></span> {t.news.title}
+        </motion.h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {t.news.items.map((news, idx) => (
+            <motion.a 
+              key={idx} 
+              href={news.link} 
+              target="_blank" 
+              rel="noreferrer" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true, margin: "-100px" }} 
+              transition={{ delay: idx * 0.15, duration: 0.5 }} 
+              className="group relative flex flex-col justify-between p-8 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(249,115,22,0.1)] overflow-hidden min-h-[16rem]"
+            >
+              {/* Efek Background Icon SVG Keren */}
+              <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                <svg className="w-24 h-24 text-orange-500 transform group-hover:rotate-12 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+              </div>
+
+              <div className="relative z-10 flex flex-col gap-5 h-full">
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 text-xs font-bold bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">
+                    {news.date}
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-orange-500 text-slate-400 group-hover:text-slate-950 transition-colors">
+                    <svg className="w-4 h-4 transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-100 group-hover:text-orange-400 transition-colors leading-snug mt-auto">
+                  {news.title}
+                </h3>
+              </div>
+            </motion.a>
           ))}
         </div>
       </section>
