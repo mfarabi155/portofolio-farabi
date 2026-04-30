@@ -76,6 +76,13 @@ export default function Home() {
         title: "Karya & Portofolio",
         items: [
           {
+            name: "Haruhana Language Course & LMS",
+            desc: "Pengembangan website perusahaan dan Learning Management System (LMS) interaktif untuk kursus bahasa Jepang dan Korea. Sistem ini dirancang untuk memfasilitasi pembelajaran bagi anak-anak hingga dewasa, mencakup manajemen pengguna, modul kursus, dan pelacakan kemajuan.",
+            link: "https://haruhanacourse.com/",
+            img: "/logo-haruhana.png",
+            tags: ["LMS Development", "Web Development", "Edutech"]
+          },
+          {
             name: "Platform E-Learning Kelas Bersama",
             desc: "Pengembangan platform pembelajaran daring terpadu menggunakan framework Moodle. Sistem ini diperkaya dengan integrasi Artificial Intelligence (AI) untuk meningkatkan pengalaman belajar dan otomatisasi sistem evaluasi peserta didik.",
             link: "https://kelasbersama.my.id/",
@@ -169,6 +176,13 @@ export default function Home() {
       portfolio: {
         title: "Featured Projects",
         items: [
+          {
+            name: "Haruhana Language Course & LMS",
+            desc: "Developed a corporate website and an interactive Learning Management System (LMS) for Japanese and Korean language courses. The system facilitates learning for children to adults, featuring user management, course modules, and progress tracking.",
+            link: "https://haruhanacourse.com/",
+            img: "/logo-haruhana.png",
+            tags: ["LMS Development", "Web Development", "Edutech"]
+          },
           {
             name: "Kelas Bersama E-Learning Platform",
             desc: "Developed an integrated online learning platform utilizing the Moodle framework. This system is enhanced with Artificial Intelligence (AI) integrations to elevate the learning experience and automate student evaluation systems.",
