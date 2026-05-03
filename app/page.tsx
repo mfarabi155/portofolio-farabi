@@ -48,7 +48,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "Maret 2025 – Desember 2025", active: true,
+            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "Maret 2025 – Desember 2025", active: false,
             desc: [
               <>Memimpin analisis dan perencanaan implementasi arsitektur ESB menggunakan Software AG webMethods.</>,
               <>Menangani 10 project <span className="font-bold text-slate-200">enterprise</span> termasuk ESB Middleware, MPS, EOD Monitoring, Control Tower, E-Billing, hingga Inatrade.</>,
@@ -64,7 +64,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior Full Stack Developer", company: "PT. Anggara Tehnik (Melkhior)", date: "Sept 2023 – Mei 2024", active: false,
+            title: "Senior Full Stack Developer", company: "PT. Anggara Tehnik (Melkhior)", date: "September 2023 – Mei 2024", active: false,
             desc: [
               <>Mengembangkan CMS Digital Lounge website untuk CIMB Niaga menggunakan CodeIgniter 3.</>,
               <>Mengembangkan aplikasi desktop pendukung menggunakan NW.js.</>,
@@ -72,7 +72,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Full-Stack Developer", company: "CV. Aliensky.ID", date: "Des 2019 – Juli 2023", active: false,
+            title: "Full-Stack Developer", company: "CV. Aliensky.ID", date: "Desember 2019 – Juli 2023", active: false,
             desc: [
               <>Membangun aplikasi <span className="font-bold text-slate-200">billing</span> warnet (C# & Django) dan sistem manajemen hotel (C# & Laravel).</>,
               <>Bertindak sebagai mentor teknis bagi mahasiswa magang dalam pengembangan sistem manajemen indekos berbasis Laravel, Flutter, dan MySQL.</>
@@ -157,7 +157,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "March 2025 – December 2025", active: true,
+            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "March 2025 – December 2025", active: false,
             desc: [
               <>Leading the analysis and planning of ESB architecture implementation using Software AG webMethods.</>,
               <>Handling 10 <span className="font-bold text-slate-200">enterprise</span> projects including ESB Middleware, MPS, EOD Monitoring, Control Tower, E-Billing, and Inatrade.</>,
@@ -173,7 +173,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior Full Stack Developer", company: "PT. Anggara Tehnik (Melkhior)", date: "Sept 2023 – May 2024", active: false,
+            title: "Senior Full Stack Developer", company: "PT. Anggara Tehnik (Melkhior)", date: "September 2023 – May 2024", active: false,
             desc: [
               <>Developing a CMS Digital Lounge website for CIMB Niaga using CodeIgniter 3.</>,
               <>Developing supporting desktop applications using NW.js.</>,
@@ -181,7 +181,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Full-Stack Developer", company: "CV. Aliensky.ID", date: "Dec 2019 – July 2023", active: false,
+            title: "Full-Stack Developer", company: "CV. Aliensky.ID", date: "December 2019 – July 2023", active: false,
             desc: [
               <>Building internet cafe <span className="font-bold text-slate-200">billing</span> applications (C# & Django) and hotel management systems (C# & Laravel).</>,
               <>Acting as a technical mentor for interns in developing a boarding house management system using Laravel, Flutter, and MySQL.</>
