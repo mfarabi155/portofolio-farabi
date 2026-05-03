@@ -48,7 +48,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "Maret 2025 – Sekarang", active: true,
+            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "Maret 2025 – Desember 2025", active: true,
             desc: [
               <>Memimpin analisis dan perencanaan implementasi arsitektur ESB menggunakan Software AG webMethods.</>,
               <>Menangani 10 project <span className="font-bold text-slate-200">enterprise</span> termasuk ESB Middleware, MPS, EOD Monitoring, Control Tower, E-Billing, hingga Inatrade.</>,
@@ -157,7 +157,7 @@ export default function Home() {
             ]
           },
           {
-            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "March 2025 – Present", active: true,
+            title: "Senior System Analyst", company: "Indonesia Eximbank", date: "March 2025 – December 2025", active: true,
             desc: [
               <>Leading the analysis and planning of ESB architecture implementation using Software AG webMethods.</>,
               <>Handling 10 <span className="font-bold text-slate-200">enterprise</span> projects including ESB Middleware, MPS, EOD Monitoring, Control Tower, E-Billing, and Inatrade.</>,
