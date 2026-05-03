@@ -40,7 +40,7 @@ export default function Home() {
         title: "Pengalaman Profesional",
         jobs: [
           {
-            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "[Bulan] 2025 – Sekarang", active: true,
+            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "Desember 2025 – Sekarang", active: true,
             desc: [
               <>Menyusun dokumen <span className="font-bold text-slate-200">Technical Specification Document (TSD)</span> sebagai acuan pengembangan sistem.</>,
               <>Terlibat aktif dalam project <span className="font-bold text-slate-200">E-Audit</span> mulai dari analisis kebutuhan hingga implementasi.</>,
@@ -149,7 +149,7 @@ export default function Home() {
         title: "Professional Experience",
         jobs: [
           {
-            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "[Month] 2025 – Present", active: true,
+            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "December 2025 – Present", active: true,
             desc: [
               <>Preparing <span className="font-bold text-slate-200">Technical Specification Documents (TSD)</span> as the technical reference for system development.</>,
               <>Actively involved in the <span className="font-bold text-slate-200">E-Audit</span> project, covering requirements analysis through to implementation.</>,
