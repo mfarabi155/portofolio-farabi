@@ -40,6 +40,14 @@ export default function Home() {
         title: "Pengalaman Profesional",
         jobs: [
           {
+            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "[Bulan] 2025 – Sekarang", active: true,
+            desc: [
+              <>Menyusun dokumen <span className="font-bold text-slate-200">Technical Specification Document (TSD)</span> sebagai acuan pengembangan sistem.</>,
+              <>Terlibat aktif dalam project <span className="font-bold text-slate-200">E-Audit</span> mulai dari analisis kebutuhan hingga implementasi.</>,
+              <>Melaksanakan <span className="font-bold text-slate-200">System Integration Testing (SIT)</span> menggunakan tools UFT ONE untuk memastikan kualitas dan keandalan sistem.</>
+            ]
+          },
+          {
             title: "Senior System Analyst", company: "Indonesia Eximbank", date: "Maret 2025 – Sekarang", active: true,
             desc: [
               <>Memimpin analisis dan perencanaan implementasi arsitektur ESB menggunakan Software AG webMethods.</>,
@@ -140,6 +148,14 @@ export default function Home() {
       exp: {
         title: "Professional Experience",
         jobs: [
+          {
+            title: "System Analyst", company: "Astra Graphia Information Technology (AGIT)", date: "[Month] 2025 – Present", active: true,
+            desc: [
+              <>Preparing <span className="font-bold text-slate-200">Technical Specification Documents (TSD)</span> as the technical reference for system development.</>,
+              <>Actively involved in the <span className="font-bold text-slate-200">E-Audit</span> project, covering requirements analysis through to implementation.</>,
+              <>Conducting <span className="font-bold text-slate-200">System Integration Testing (SIT)</span> using UFT ONE to ensure system quality and reliability.</>
+            ]
+          },
           {
             title: "Senior System Analyst", company: "Indonesia Eximbank", date: "March 2025 – Present", active: true,
             desc: [
@@ -418,18 +434,18 @@ export default function Home() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold text-slate-100 mb-12 flex items-center gap-3">
           <span className="w-8 h-1 bg-orange-500 rounded-full"></span> {t.news.title}
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {t.news.items.map((news, idx) => (
-            <motion.a 
-              key={idx} 
-              href={news.link} 
-              target="_blank" 
-              rel="noreferrer" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              viewport={{ once: true, margin: "-100px" }} 
-              transition={{ delay: idx * 0.15, duration: 0.5 }} 
+            <motion.a
+              key={idx}
+              href={news.link}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: idx * 0.15, duration: 0.5 }}
               className="group relative flex flex-col justify-between p-8 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(249,115,22,0.1)] overflow-hidden min-h-[16rem]"
             >
               {/* Efek Background Icon SVG Keren */}
@@ -448,7 +464,7 @@ export default function Home() {
                     <svg className="w-4 h-4 transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-slate-100 group-hover:text-orange-400 transition-colors leading-snug mt-auto">
                   {news.title}
                 </h3>
@@ -516,15 +532,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-10 text-center flex flex-col items-center justify-center">
-        
+
         {/* Visitor Counter Badge */}
         <div className="mb-6 flex flex-col items-center gap-2">
           <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
             {lang === 'id' ? 'Total Pengunjung' : 'Total Visitors'}
           </span>
-          <img 
-            src="https://hits.sh/portofolio-farabi.vercel.app.svg?style=for-the-badge&label=VISITORS&color=06b6d4&labelColor=0f172a" 
-            alt="Visitor Count" 
+          <img
+            src="https://hits.sh/portofolio-farabi.vercel.app.svg?style=for-the-badge&label=VISITORS&color=06b6d4&labelColor=0f172a"
+            alt="Visitor Count"
             className="rounded-md hover:scale-105 transition-transform shadow-lg"
           />
         </div>
